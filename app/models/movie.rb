@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
 	def self.all_ratings
-		self.find(:all, :select => "rating", :group => "ratings").map(@:rating)
+		%w(G PG PG-13 NC-17 R)
 	end
 end
